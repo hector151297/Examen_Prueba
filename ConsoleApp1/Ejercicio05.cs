@@ -10,37 +10,46 @@ internal class Ejercicio05
 {
     private static void Main05(string[] args)
     {
+        const int minNota = 0;
+        const int maxNota = 20;
+
+        static bool EsValido(double numero) => numero >= minNota && numero <= maxNota;
+
         Console.Write("ingrese el primero numero: ");
-        int numero01 = int.Parse(Console.ReadLine());
+        double numero01 = double.Parse(Console.ReadLine());
 
         Console.Write("ingrese el segundo numero: ");
-        int numero02 = int.Parse(Console.ReadLine());
+        double numero02 = double.Parse(Console.ReadLine());
 
         Console.Write("ingrese el tercer numero: ");
-        int numero03 = int.Parse(Console.ReadLine());
+        double numero03 = double.Parse(Console.ReadLine());
 
-        double prom = (numero01 + numero02 + numero03) / 3;
+        double prom = Math.Round((numero01 + numero02 + numero03) / 3);
 
+        if (EsValido(numero01) && EsValido(numero02) && EsValido(numero03))
+        {
 
-        if (prom >= 18 && prom <= 20 && numero01 >= 0 && numero01 <= 20 && numero02 >= 0 && numero02 <= 20 && numero03 >= 0 && numero03 <= 20)
-        {
-            Console.Write($"{prom} Excelente");
-        }
-        else if (prom >= 14 && prom <= 17 && numero01 <= 20 && numero02 >= 0 && numero02 <= 20 && numero03 >= 0 && numero03 <= 20)
-        {
-            Console.Write($"{prom} Aprobado");
-        }
-        else if (prom >= 11 && prom <= 13 && numero01 <= 20 && numero02 >= 0 && numero02 <= 20 && numero03 >= 0 && numero03 <= 20)
-        {
-            Console.Write($"{prom} Regular");
-        }
-        else if (prom >= 0 && prom <= 10 && numero01 <= 20 && numero02 >= 0 && numero02 <= 20 && numero03 >= 0 && numero03 <= 20)
-        {
-            Console.Write($"{prom} Reprobado");
+            if (prom >= 18 && prom <= 20)
+            {
+                Console.Write($"{prom} Excelente");
+            }
+            else if (prom >= 14 && prom <= 17)
+            {
+                Console.Write($"{prom} Aprobado");
+            }
+            else if (prom >= 11 && prom <= 13)
+            {
+                Console.Write($"{prom} Regular");
+            }
+            else if (prom >= 0 && prom <= 10)
+            {
+                Console.Write($"{prom} Reprobado");
+            }
         }
         else
         {
             Console.Write("ingrese una nota valida");
         }
+
     }
 }

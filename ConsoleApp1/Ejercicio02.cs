@@ -15,38 +15,44 @@ internal class Ejercicio02
 {
     private static void Main02(string[] args)
     {
+        const string suma = "+";
+        const string resta = "-";
+        const string multiplicacion = "*";
+        const string division = "/";
+
         Console.Write("ingrese el primero numero: ");
-        int numero01 = int.Parse(Console.ReadLine());
+        double numero01 = double.Parse(Console.ReadLine());
 
         Console.Write("ingrese el segundo numero: ");
-        int numero02 = int.Parse(Console.ReadLine());
+        double numero02 = double.Parse(Console.ReadLine());
 
         Console.Write("ingrese un operador : ");
         string operador = Console.ReadLine();
 
-        if (operador == "+")
+        if (operador == suma)
         {
-            int suma = numero01 + numero02;
-            Console.Write($"la suma es {suma} ");
+            double sum = numero01 + numero02;
+            Console.Write($"la suma es {sum} ");
         }
-        else if (operador == "-")
+        else if (operador == resta)
         {
-            int resta = numero01 - numero02;
-            Console.Write($"la resta es {resta} ");
+            double rest = numero01 - numero02;
+            Console.Write($"la resta es {rest} ");
         }
-        else if (operador == "*")
+        else if (operador == multiplicacion)
         {
-            int multi = numero01 * numero02;
+            double multi = numero01 * numero02;
             Console.Write($"la multiplicacion es {multi} ");
         }
-        else if (operador == "/")
+        else if (operador == division)
         {
-            int divi = numero01 / numero02;
+            double divi = numero01 / numero02;
             Console.Write($"la division es {divi} ");
         }
         else
         {
             Console.Write("coloque un operador valido");
         }
+
     }
 }

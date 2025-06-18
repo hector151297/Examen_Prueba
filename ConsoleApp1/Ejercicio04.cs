@@ -11,6 +11,9 @@ internal class Ejercicio04
 {
     private static void Main04(string[] args)
     {
+        const string paisPermitido = "peru";
+        const int edadMinima = 18;
+
         Console.Write("ingrese su nombre: ");
         string nombre = Console.ReadLine();
 
@@ -18,11 +21,11 @@ internal class Ejercicio04
         string pais = Console.ReadLine().ToLower();
 
 
-        if (pais == "peru")
+        if (pais == paisPermitido)
         {
             Console.Write("ingrese su edad: ");
             int edad = int.Parse(Console.ReadLine());
-            if (edad >= 18)
+            if (edad >= edadMinima)
             {
                 Console.Write($"{nombre} puede votar");
             }
@@ -35,5 +38,6 @@ internal class Ejercicio04
         {
             Console.Write("solo pueden votar peruanos");
         }
+
     }
 }

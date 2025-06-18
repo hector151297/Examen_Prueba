@@ -11,13 +11,14 @@ internal class Ejercicio01
 {
     private static void Main01(string[] args)
     {
+        const int numMin = 10;
         Console.Write("ingrese el primero numero: ");
         int numero01 = int.Parse(Console.ReadLine());
 
         Console.Write("ingrese el segundo numero: ");
         int numero02 = int.Parse(Console.ReadLine());
 
-        if (numero01 > 10 && numero02 > 10)
+        if (numero01 > numMin && numero02 > numMin)
         {
             int suma = numero01 + numero02;
             int resta = numero01 - numero02;
